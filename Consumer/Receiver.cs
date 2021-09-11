@@ -17,6 +17,7 @@ namespace Consumer
 			using (var connection = factory.CreateConnection())
 			using (var channel = connection.CreateModel())
 			{
+				//Queue name "BasicTest" was established in Sender
 				channel.QueueDeclare("BasicTest", false, false, false, null);
 
 				//create consumer object
